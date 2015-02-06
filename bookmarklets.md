@@ -1,5 +1,7 @@
 # BOOKMARKLETS 
 
+See this page at: <http://caiorss.github.io/bookmarklets.html>
+
 Useful bookmarklets for Web Scraping, Web Development and for easy navigation.
 
 To install the bookmarklet, drag and drop the link to the Browser's bookmark bar.
