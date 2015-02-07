@@ -151,6 +151,19 @@ See: <http://billyreisinger.com/jash>
 <a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://www.billyreisinger.com/jash/source/latest/Jash.js';})();">Jash Shell</a>
 </d1>
 
+####  Script Prompt
+
+Credits: <http://4umi.com/web/bookmarklet/all.php>
+
+Prompts for javascript code and variables, which it interprets and outputs in another fully functional prompt. In the right hands, it has all the tools needed for the most complicated script debugging, down to an pocket calculator. 
+
+<d1>
+<a href="javascript:function JSexe(){ if(valJS!='null' &amp;&amp; valJS!='undefined')strJS=valJS; strJS=prompt('Your Javascript code or variable:',strJS); if(strJS!=null &amp;&amp; strJS!='' &amp;&amp; strJS!='undefined'){  setTimeout('valJS=\'\'+eval(strJS);JSexe()',10); } else{valJS='';strJS='';}}valJS='';strJS='';JSexe();" class="jsl">Script Prompt</a>
+</d1>
+
+
+
+
 #### Inspect Page with AADVARk
 
 The Aardvark bookmarklet is a tool for web developers/designers as well as casual users. To quickly see it in action on this page,
@@ -169,5 +182,73 @@ Inject JQuery to test, debug, modify and hack the client side view of a page, so
 
 <d1>
 <a href="javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://code.jquery.com/jquery-1.7.2.min.js' })();"> Inject Jquery </a>
+</d1>
+
+#### Show Cookies
+
+Credits: <http://4umi.com/web/bookmarklet/all.php>
+
+Pops up the content of the cookie associated with the current website. 
+
+<d1>
+<a href="javascript:document.cookie='';function hjK(S4p){D3p=/; /g;return S4p.replace(D3p, '&lt;br&gt;&lt;br&gt;');}if(document.cookie.length&lt;1){alert('No cookie from this site!')}else{with((na=open('','','')).document){write(hjK('Cookie for '+document.title.link(window.location.href)+', dd. '+new Date()+'&lt;hr&gt;'+document.cookie));close()}}//4umi.com">Cookie Pop</a>
+</d1>
+
+
+#### Execute HTML
+
+Interprets and pops up any selection of written out HTML, including script. Works similar to the "As New Page" bookmarklet if plain text is selected. Saves tons of time and hassle - for geeks.
+
+Credits: <http://4umi.com/web/bookmarklet/all.php>
+
+<d1>
+<a href="javascript:var txt='';function getSelText(wndw){var sel='';if(document.all){sel=wndw.document.selection.createRange().text;}else{sel=wndw.window.getSelection();}return sel;}void(frms=window.frames);if(frms.length==0){txt=getSelText(window);}else{for(iQA=0;iQA&lt;frms.length;iQA++){void(txt=getSelText(frms[iQA]));if(txt.length&gt;0){break;}}}while(txt.length==0){txt=promt('Input:');}win=window.open('','','');void(win.document.write(txt));void(win.document.close())" class="jsl">Execute HTML</a>
+</d1>
+
+#### Remove Cookies
+
+Credits: <http://4umi.com/web/bookmarklet/all.php>
+
+<d1>
+<a href="javascript:void(document.cookie=null)//4umi.com" class="jsl">Cookie Delete</a>
+</d1>
+
+#### Stop Popup
+
+Credits: <http://4umi.com/web/bookmarklet/all.php>
+
+Attempts to kill all popups and the current window. 
+
+<d1>
+<a href="javascript:window.onload=window.onunload=window.onbeforeunload=null;window.close();//%20Copyright%202000%20SiteExperts.com" class="jsl">Stop Popup</a>
+</d1>
+
+#### Strip Script
+
+Credits: <http://4umi.com/web/bookmarklet/all.php>
+
+Strips all scripts from a page. 
+
+<d1>
+<a href="javascript:if(frames.length){alert('Sorry, doesn\'t work in frames.');}else{while((es=document.getElementsByTagName('script')).length){es[0].parentNode.removeChild(es[0]);}es=document.all;for(i=0;i&lt;es.length;++i){e=es[i];for(p in e){if(!p.indexOf('on')&amp;&amp;e[p]){e[p]=null;}}}document.write(document.documentElement.outerHTML);document.close();onerror=function(){return true}}//4umi.com" class="jsl">Strip Script</a>
+</d1>
+
+#### Restore Rightclick     
+
+Restores the default function of the alternative mouse button, which is to pop up a contextmenu, on pages where this has been tempered with. diable
+
+<d1>
+<a href="javascript:void(document.onmousedown='return true');void(document.onmouseup='return true');void(document.oncontextmenu='return true')" class="jsl">Restore Rightclick</a>
+</d1>
+
+
+#### Get Window Size
+
+Credits: <http://4umi.com/web/bookmarklet/all.php>
+
+Alerts the width and height in pixels of the inner window.
+
+<d1>
+<a href="javascript:alert('Window inner dimensions:\n\n   '+document.body.clientWidth+' x '+document.body.clientHeight)" class="jsl">Get size</a>
 </d1>
 
