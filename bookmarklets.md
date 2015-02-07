@@ -18,8 +18,10 @@ Miscs
 *   http://ha.ckers.org/bookmarklets.htmlsaad
 *   http://www.wordreference.com/english/LinkButtonsOld.htm
 
-## Template
+## Templates
 
+
+### Bookmarklets templates / Executable URLs
 
 Run Generic Javascript Code
 
@@ -33,6 +35,7 @@ Inject Script into Page
 <a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://SCRIPT-URL/SCRIPT.JS' })();"> Label </a>
 ```
 
+
 Example: 
 
 Click in the link bellow to show a message box with the text 'Hello World Javascript !!' 
@@ -45,9 +48,22 @@ Click in the link bellow to show a message box with the text 'Hello World Javasc
 <a href="javascript:(function(){alert('Hello World Javascript !!')})()"> Click me </a>
 ```
 
+### Useful Javascript Snippts
+
+Inject Jquery Snippet
+
+```javascript
+document.body.appendChild(document.createElement('script')).src='http://code.jquery.com/jquery-1.7.2.min.js'
+```
 
 
 ## Utilities
+
+#### Panel With Many Useful Bookmarklets
+
+<d1>
+<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://caiorss.github.io/commandpanel.js' })();">JS Panel</a>
+</d1>
 
 
 #### Tiny URL
@@ -137,7 +153,7 @@ Then click it when you are on a page with images you want to track down.
 Source: <http://jarred.github.io/src-img/>
 
 <d1>
-<a href="javascript:void((function(){var sir=document.createElement('script');sir.setAttribute('src','http://cdnjs.cloudflare.com/ajax/libs/require.js/0.26.0/require.min.js');sir.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sir);var sib=document.createElement('script');sib.setAttribute('src','http://jarred.github.com/src-img/js/app/bookmarklet.js?version=0.66');sib.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sib);})());"><u>?</u>¿<u> src-im</u>g</a>
+<a href="javascript:void((function(){var sir=document.createElement('script');sir.setAttribute('src','http://cdnjs.cloudflare.com/ajax/libs/require.js/0.26.0/require.min.js');sir.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sir);var sib=document.createElement('script');sib.setAttribute('src','http://jarred.github.com/src-img/js/app/bookmarklet.js?version=0.66');sib.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sib);})());">src-im</a>
 </d1>
 
 

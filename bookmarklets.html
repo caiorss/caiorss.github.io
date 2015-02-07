@@ -14,7 +14,8 @@
 <li><a href="http://ha.ckers.org/bookmarklets.htmlsaad">http://ha.ckers.org/bookmarklets.htmlsaad</a></li>
 <li><a href="http://www.wordreference.com/english/LinkButtonsOld.htm">http://www.wordreference.com/english/LinkButtonsOld.htm</a></li>
 </ul>
-<h2 id="template">Template</h2>
+<h2 id="templates">Templates</h2>
+<h3 id="bookmarklets-templates-executable-urls">Bookmarklets templates / Executable URLs</h3>
 <p>Run Generic Javascript Code</p>
 <div class="highlight highlight-html"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;javascript:(function(){ &lt;&lt;&lt; JAVASCRIPT CODE HERE &gt;&gt;&gt;  })()&quot;</span><span class="nt">&gt;</span> Bookmark Label <span class="nt">&lt;/a&gt;</span>
 </pre></div>
@@ -29,7 +30,17 @@
 
 <div class="highlight highlight-html"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;javascript:(function(){alert(&#39;Hello World Javascript !!&#39;)})()&quot;</span><span class="nt">&gt;</span> Click me <span class="nt">&lt;/a&gt;</span>
 </pre></div>
+<h3 id="useful-javascript-snippts">Useful Javascript Snippts</h3>
+<p>Inject Jquery Snippet</p>
+<div class="highlight highlight-javascript"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)).</span><span class="nx">src</span><span class="o">=</span><span class="s1">&#39;http://code.jquery.com/jquery-1.7.2.min.js&#39;</span>
+</pre></div>
 <h2 id="utilities">Utilities</h2>
+<h4 id="panel-with-many-useful-bookmarklets">Panel With Many Useful Bookmarklets</h4>
+<d1>
+<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://caiorss.github.io/commandpanel.js' })();">JS Panel</a>
+</d1>
+
+
 <h4 id="tiny-url">Tiny URL</h4>
 <d1>
 <a href="javascript:void(open('http://tinyurl.com/create.php?url='+encodeURIComponent(location.href)))">TinyURL</a>
@@ -94,7 +105,7 @@ How do I use it? Drag the following link to the bookmarks bar in your browser.
 Then click it when you are on a page with images you want to track down.</p>
 <p>Source: <a href="http://jarred.github.io/src-img/">http://jarred.github.io/src-img/</a></p>
 <d1>
-<a href="javascript:void((function(){var sir=document.createElement('script');sir.setAttribute('src','http://cdnjs.cloudflare.com/ajax/libs/require.js/0.26.0/require.min.js');sir.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sir);var sib=document.createElement('script');sib.setAttribute('src','http://jarred.github.com/src-img/js/app/bookmarklet.js?version=0.66');sib.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sib);})());"><u>?</u>¿<u> src-im</u>g</a>
+<a href="javascript:void((function(){var sir=document.createElement('script');sir.setAttribute('src','http://cdnjs.cloudflare.com/ajax/libs/require.js/0.26.0/require.min.js');sir.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sir);var sib=document.createElement('script');sib.setAttribute('src','http://jarred.github.com/src-img/js/app/bookmarklet.js?version=0.66');sib.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sib);})());">src-im</a>
 </d1>
 
 
