@@ -84,12 +84,6 @@ function fullUrls() {
  
 }
 
-function dismiss$d() {
- document.body.removeChild($c);
- window.onscroll = oldscroll;
- window.hhhgewrt34frdki = null;
-};
-
 
 /* Credits: http://www.xinotes.net/notes/note/219/ */
 function ShowCookies(){
@@ -110,7 +104,7 @@ function ShowCookies(){
 
      $tbl = '<table style=\'background:#A9CCCC;font-family:sans-serif;font-size:0.9em;margin:0;padding:0\' cellspacing=\'1\' cellpadding=\'4\' border=\'0\'>';
      if (document.cookie) {
-         $tbl += '<tr><th style=\'background:#6A8080;color:#FFF;\'>Cookie</th><th style=\'background:#6A8080;color:#FFF;\'><div style=\'display:block;float:right;cursor:pointer;width:auto\' onclick=\'dismiss$d();\'>x</div>ValueÂ Â </th></tr>';
+         $tbl += '<tr><th style=\'background:#6A8080;color:#FFF;\'>Cookie</th><th style=\'background:#6A8080;color:#FFF;\'><div style=\'display:block;float:right;cursor:pointer;width:auto\' onclick=\'document.body.removeChild($c);  window.onscroll = oldscroll;  window.hhhgewrt34frdki = null;\'>x</div>ValueÂ Â </th></tr>';
          $cc = document.cookie.split('; ');
          for ($i = 0; $i < $cc.length; $i++) {
              $c0 = $cc[$i];
@@ -121,7 +115,7 @@ function ShowCookies(){
              $tbl += '<tr><td style=\'background:#FFF;text-align:left\'>' + $c0.substr(0, $ci) + '</td><td style=\'background:#FFF;text-align:left\'>' + unescape($c0.substr($ci + 1)) + '</td></tr>';
          };
      } else {
-         $tbl += '<tr><th style=\'background:#6A8080;color:#FFF;width:200px\'><div style=\'display:block;float:right;cursor:pointer;width:auto\' onclick=\'dismiss$d();\'>x</div>Cookies</th></tr>' + '<tr><td style=\'text-align:center;background:#FFF\'>None</td></tr>';
+         $tbl += '<tr><th style=\'background:#6A8080;color:#FFF;width:200px\'><div style=\'display:block;float:right;cursor:pointer;width:auto\' onclick=\'document.body.removeChild($c);  window.onscroll = oldscroll;  window.hhhgewrt34frdki = null;\'>x</div>Cookies</th></tr>' + '<tr><td style=\'text-align:center;background:#FFF\'>None</td></tr>';
      };
      $tbl += '</table>';
      $c.innerHTML = $tbl;
