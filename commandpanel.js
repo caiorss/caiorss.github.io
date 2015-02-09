@@ -14,9 +14,17 @@ function create_text(text){
 
 function hyperlink(label, url, onclick){
     var a = create_tag("a") ;
-    a.href = url ;
+    //a.href = url ;
     a.innerHTML = label;
-    if(onclick !=undefined) a.onclick = onclick ;
+    
+    if (typeof url == "function"){
+    
+        a.href = func2JSurl(url);
+    }else{
+        a.href = url ;
+    };
+        
+    //if(onclick !=undefined) a.onclick = onclick ;
     return a;
 };
 
@@ -43,19 +51,28 @@ function add_label(label){
   
 };
 
+function func2JSurl(func){
+    var code = func.toString();
+    var url = "javascript:(function()" + code.replace(/function.*\(\)/, '').replace(/\/\/.*/,"") + ")();";
+    return url ;
+};  
+
+
+//--------------------------------------------------------------------//
+
 function showAllLinks(){
     var a = '';
     for (var ln = 0; ln < document.links.length; ln++) {
         var lk = document.links[ln];
         a += ln + ': <a href=\'' + lk + '\' title=\'' + lk.text + '\'>' + lk + '</a><br>\n';
-    }
-    w = window.open('#', 'Links', 'scrollbars,resizable,width=400,height=600');
+    };
+    w = window.open('', 'Links', 'scrollbars,resizable,width=400,height=600');
     w.document.write(a);    
     //w.document.body.innerHTML = a ;
-}
+};
 
 function fullUrls() {
-// Changes the text of links to match their absolute urls.
+/* Changes the text of links to match their absolute urls. */
     var i, c, x, h;
     for (i = 0; x = document.links[i]; ++i) {
         h = x.href;
@@ -73,9 +90,10 @@ function dismiss$d() {
  window.hhhgewrt34frdki = null;
 };
 
+
+/* Credits: http://www.xinotes.net/notes/note/219/ */
 function ShowCookies(){
-// Credits: http://www.xinotes.net/notes/note/219/
-//
+
      if (!window.hhhgewrt34frdki) {
      window.hhhgewrt34frdki = true;
      $c = document.createElement('DIV');
@@ -86,7 +104,7 @@ function ShowCookies(){
          $c.style.top = (document.body.scrollTop || document.documentElement.scrollTop) + 5 + 'px';
          if (oldscroll) {
              oldscroll();
-         }
+         };
      };
 
 
@@ -99,18 +117,18 @@ function ShowCookies(){
              $ci = $c0.indexOf('=');
              if ($ci < 0) {
                  $ci = $c0.length;
-             }
+             };
              $tbl += '<tr><td style=\'background:#FFF;text-align:left\'>' + $c0.substr(0, $ci) + '</td><td style=\'background:#FFF;text-align:left\'>' + unescape($c0.substr($ci + 1)) + '</td></tr>';
-         }
+         };
      } else {
          $tbl += '<tr><th style=\'background:#6A8080;color:#FFF;width:200px\'><div style=\'display:block;float:right;cursor:pointer;width:auto\' onclick=\'dismiss$d();\'>x</div>Cookies</th></tr>' + '<tr><td style=\'text-align:center;background:#FFF\'>None</td></tr>';
-     }
+     };
      $tbl += '</table>';
      $c.innerHTML = $tbl;
      $c.style.top = (document.body.scrollTop || document.documentElement.scrollTop) + 5 + 'px';
      $c.style.left = '5px';
      void(x = 3);
- }
+ };
 };
 
 
@@ -172,9 +190,11 @@ add_mark("Image Search" , "javascript:void((function(){var sir=document.createEl
 add_mark("Print What You Like", "javascript:(function(){if(window['ppw']&&ppw['bookmarklet']){ppw.bookmarklet.toggle();}else{window._pwyl_home='//www.printwhatyoulike.com/';window._pwyl_pro_id=null;window._pwyl_bmkl=document.createElement('script');window._pwyl_bmkl.setAttribute('type','text/javascript');window._pwyl_bmkl.setAttribute('src',window._pwyl_home+'static/compressed/pwyl_bookmarklet_10.js');window._pwyl_bmkl.setAttribute('pwyl','true');document.getElementsByTagName('head')[0].appendChild(window._pwyl_bmkl);}})();");
 
 
-add_mark("Show All Links", "#",  showAllLinks)
+//add_mark("Show All Links", "#",  showAllLinks)
+//add_mark("Show All Links", "javascript:" + showAllLinks.toString())
+add_mark("Show All Links", showAllLinks)
 
-add_mark("Show Cookies", "#", ShowCookies) ;
+add_mark("Show Cookies", ShowCookies) ;
 
 //==================
 add_label("Web Dev");
@@ -195,13 +215,13 @@ add_mark("Remove Cookies", "javascript:void(document.cookie=null)");
 
 add_mark("PwnYoutube", "javascript:(function(){url='http://deturl.com/download-video.js';document.body.appendChild(document.createElement('script')).src=url+'?'+new Date().getTime();})();") ;
 
-add_mark("Full URLs", "#",  fullUrls)
+add_mark("Full URLs", fullUrls)
 
 //===================
 add_label("Updates");
 add_mark("Bookmarklets", "http://caiorss.github.io/bookmarklets.html");
 
-add_mark("Close", "#", remove_panel)
+add_mark("Close", remove_panel)
 
 
 subpanel.appendChild(UL);
