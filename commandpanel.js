@@ -196,7 +196,7 @@ add_label("Web Dev");
 add_mark("Inject JQuery", "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://code.jquery.com/jquery-1.7.2.min.js' })();");
 
 
-add_mark("Inject Functional.js",
+add_mark("Run Functional.js",
 "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://caiorss.github.io/functional.js' })();");
 
 
