@@ -878,11 +878,10 @@ function Selector(List){
     
     this.children = function(){
     
-        return new Selector(this.List[0].children)
+        return new Selector(this.List[0].children);
     };
     
-    
-    };
+       
     
 }; // End Of Selector
 
